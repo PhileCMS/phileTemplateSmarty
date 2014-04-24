@@ -3,18 +3,25 @@ phileTemplateSmarty
 
 [Smarty](http://www.smarty.net/docs/en/)(version 3.1.15 included) template parser for [PhileCMS](https://github.com/PhileCMS/Phile)
 
-### Installation
+### 1.1 Installation (composer)
+```
+php composer.phar require phile/template-smarty:*
+```
 
-[Download this file](https://github.com/PhileCMS/phileTemplateSmarty/archive/master.zip "Download ZIP File") and drop it into the root Phile installation directory.
+### 1.2 Installation (Download)
+
+* Install the latest version of [Phile](https://github.com/PhileCMS/Phile)
+* Clone this repo into `plugins/phile/templateSmarty`
+* add `$config['plugins']['phile\\templateSmarty'] = array('active' => true);` to your `config.php`
 
 Modify your `config.php` file:
 
 ```php
 $config['plugins'] = array(
   // disable the Twig template engine
-  'phileTemplateTwig' => array('active' => false),
+  'phile\\templateTwig' => array('active' => false),
   // enable the Smarty template engine
-  'phileTemplateSmarty' => array('active' => true)
+  'phile\\templateSmarty' => array('active' => true)
 );
 ```
 

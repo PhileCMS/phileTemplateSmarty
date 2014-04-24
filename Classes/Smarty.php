@@ -1,9 +1,13 @@
 <?php
+/**
+ * Plugin class
+ */
+namespace Phile\Plugin\Phile\TemplateSmarty;
 
-namespace Phile\Template;
 
 use Phile\Registry;
 use Phile\Event;
+use Phile\ServiceLocator\TemplateInterface;
 
 class Smarty implements TemplateInterface {
 	/**
@@ -36,7 +40,6 @@ class Smarty implements TemplateInterface {
 		$pageRepository = new \Phile\Repository\Page();
 		$output = 'No template found!';
 		if (file_exists(THEMES_DIR . $this->settings['theme'])) {
-			require_once('smarty-lib/Smarty.class.php');
 			$smarty = new \Smarty();
 			$smarty->setTemplateDir(THEMES_DIR . $this->settings['theme']);
 			$smarty->setCompileDir(THEMES_DIR . $this->settings['theme'] . '/_compiled');
