@@ -7,7 +7,7 @@ namespace Phile\Plugin\Phile\TemplateSmarty;
 /**
  * Smarty Phile template engine
  */
-class PhileTemplateSmarty extends \Phile\Plugin\AbstractPlugin implements \Phile\Gateway\EventObserverInterface {
+class Plugin extends \Phile\Plugin\AbstractPlugin implements \Phile\Gateway\EventObserverInterface {
 	public function __construct() {
 		\Phile\Event::registerEvent('plugins_loaded', $this);
 	}
